@@ -24,7 +24,7 @@ fn caesar_cypher(s: &str, k: i32) -> String {
         let mut capitalized = false;
         capitalized = elem.is_uppercase();
 
-        let encoded_letter_index = current_letter_index + k;
+        let encoded_letter_index = current_letter_index + k%26;
 
         j = match encoded_letter_index {
             0..=24 => encoded_letter_index,
